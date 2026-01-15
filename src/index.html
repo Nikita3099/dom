@@ -1,0 +1,35 @@
+import './css/style.css';
+import goblin from './img/goblin.png';
+
+const game = document.getElementById('game');
+
+// создаём поле 4×4
+const cells = [];
+
+for (let i = 0; i < 16; i += 1) {
+  const cell = document.createElement('div');
+  cell.classList.add('cell');
+  game.appendChild(cell);
+  cells.push(cell);
+}
+
+// создаём персонажа
+const img = document.createElement('img');
+img.src = goblin;
+
+// стартовая позиция
+let currentIndex = Math.floor(Math.random() * cells.length);
+cells[currentIndex].appendChild(img);
+
+// перемещение каждые 1 секунду
+setInterval(() => {
+  let newIndex;
+
+  do {
+    newIndex = Math.floor(Math.random() * cells.length);
+  } while (newIndex === currentIndex);
+
+  // removeChild НЕ используем
+  cells[newIndex].appendChild(img);
+  currentIndex = newIndex;
+}, 1000);
