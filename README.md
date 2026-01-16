@@ -1,5 +1,4 @@
-!\[Build](https://github.com/Nikita3099/dom/actions/workflows/deploy.yml/badge.svg)
-
+![Build](https://github.com/Nikita3099/dom/actions/workflows/deploy.yml/badge.svg)
 
 
 Ссылка на GitHub Pages:  
