@@ -1,7 +1,3 @@
-\# DOM Game
-
-
-
 !\[Build](https://github.com/Nikita3099/dom/actions/workflows/deploy.yml/badge.svg)
 
 
