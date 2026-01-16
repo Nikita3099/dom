@@ -1,27 +1,28 @@
 import './css/style.css';
 import goblin from './img/goblin.png';
 
+const FIELD_SIZE = 4;
+const CELLS_COUNT = FIELD_SIZE * FIELD_SIZE;
+const MOVE_INTERVAL = 1000;
+
 const game = document.getElementById('game');
 
-// 1. Создаём поле 4×4
 const cells = [];
 
-for (let i = 0; i < 16; i += 1) {
+for (let i = 0; i < CELLS_COUNT; i += 1) {
   const cell = document.createElement('div');
   cell.classList.add('cell');
-  game.appendChild(cell);
+  game.append(cell);
   cells.push(cell);
 }
 
-// 2. Создаём персонажа
-const img = document.createElement('img');
-img.src = goblin;
+const goblinImg = document.createElement('img');
+goblinImg.src = goblin;
+goblinImg.alt = 'Goblin';
 
-// 3. Ставим его в случайную ячейку
 let currentIndex = Math.floor(Math.random() * cells.length);
-cells[currentIndex].appendChild(img);
+cells[currentIndex].append(goblinImg);
 
-// 4. Функция перемещения
 setInterval(() => {
   let newIndex;
 
@@ -29,6 +30,6 @@ setInterval(() => {
     newIndex = Math.floor(Math.random() * cells.length);
   } while (newIndex === currentIndex);
 
-  cells[newIndex].appendChild(img);
+  cells[newIndex].append(goblinImg);
   currentIndex = newIndex;
-}, 1000);
+}, MOVE_INTERVAL);
