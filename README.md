@@ -2,15 +2,13 @@
 
 
 
-!\[Build](https://github.com/USERNAME/REPO/actions/workflows/deploy.yml/badge.svg)
+!\[Build](https://github.com/Nikita3099/dom/actions/workflows/deploy.yml/badge.svg)
 
 
 
 Ссылка на GitHub Pages:  
 
-https://USERNAME.github.io/REPO/
-
-
+https://nikita3099.github.io/dom/
 
 
 
